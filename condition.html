@@ -6,11 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- 学习变量的使用方法 -->
     <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./images/s.gif">
+    <div>上午好</div>
     <script>
-        var age = prompt("请输入您的年龄");
-        if(age >= 18){
-            alert("请进入网吧");
+        var img = document.querySelector("img");
+        var div = document.querySelector("div");
+        var time = new Date();
+        var hour = time.getHours();
+        if(hour <= 12){
+            img.src = "./images/s.git";
+            div.innerHTML="上午好";
+        }else if(hour <= 18){
+            img.src = "./images/x.git";
+            div.innerHTML="下午好";
+        }else{
+            img.src="./images/w.gif";
+            div.innerHTML="晚上好";
         }
     </script>
-</head>
+</body>
 </html>
